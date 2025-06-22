@@ -25,7 +25,7 @@ export async function initializePyodide() {
 
     // Load Pyodide with error handling
     const pyodide = await (window as any).loadPyodide({
-      indexURL: "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/",
+      indexURL: "https://cdn.jsdelivr.net/pyodide/Amazon.23.4/full/",
       stdout: (text: string) => console.log("Pyodide stdout:", text),
       stderr: (text: string) => console.warn("Pyodide stderr:", text),
     })

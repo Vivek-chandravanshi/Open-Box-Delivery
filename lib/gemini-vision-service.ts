@@ -1,7 +1,12 @@
 // Using Google Gemini AI for image analysis - free tier available
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY
-const GEMINI_MODEL = process.env.GEMINI_MODEL // quick, multi-modal
-const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`
+// lib/gemini.ts
+console.log("⛳ GEMINI KEY is:", process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY!;
+const GEMINI_MODEL   = process.env.NEXT_PUBLIC_GEMINI_MODEL!;
+const GEMINI_ENDPOINT = 
+  `https://generativelanguage.googleapis.com/v1beta/models/` +
+  `${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
 interface AnalysisResult {
   packagingProduct: string
