@@ -1,6 +1,6 @@
 // Using Google Gemini AI for image analysis - free tier available
-const GEMINI_API_KEY = "AIzaSyB1Ju8dbzOgw3cpnn6e_2PAyaFtIGFQHOo"
-const GEMINI_MODEL = "gemini-1.5-flash" // quick, multi-modal
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY
+const GEMINI_MODEL = process.env.GEMINI_MODEL // quick, multi-modal
 const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`
 
 interface AnalysisResult {
