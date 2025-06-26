@@ -1,7 +1,4 @@
 // Using Google Gemini AI for image analysis - free tier available
-// lib/gemini.ts
-console.log("⛳ GEMINI KEY is:", process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY!;
 const GEMINI_MODEL   = process.env.NEXT_PUBLIC_GEMINI_MODEL!;
 const GEMINI_ENDPOINT = 
